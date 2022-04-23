@@ -1,0 +1,26 @@
+{
+  "name": "sysctl-parser",
+  "version": "1.0.0",
+  "description": "miletos skill check task",
+  "main": "sysctlParser.js",
+  "scripts": {
+    "example": "node ./src/example.js ",
+    "test": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/44Kuniy/miletos-task.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/44Kuniy/miletos-task/issues"
+  },
+  "homepage": "https://github.com/44Kuniy/miletos-task#readme",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "jest": "^27.5.1"
+  }
+}

@@ -1,0 +1,9 @@
+endpoint = localhost:3000
+ test = testVal
+# test2 = t2va
+; test3 = t3va
+debug = true
+log.file = /var/log/console.log
+debug == true
+dasdasbjdnw:
+count = 452
