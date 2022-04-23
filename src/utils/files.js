@@ -1,6 +1,7 @@
 const _set = require("lodash/set");
 
 const { isValidLine } = require("./handleLine");
+const { valueWithType } = require("./types");
 
 const readFileContents = (fileContents) => {
   return fileContents
@@ -13,7 +14,8 @@ const parseFileContents = (fileContents) => {
   const lines = readFileContents(fileContents);
   return lines.reduce((oldObj, line) => {
     const [key, value] = line.split("=").map((e) => e.trim());
-    return _set(oldObj, key, value);
+    const typeDefinedValue = valueWithType(value);
+    return _set(oldObj, key, typeDefinedValue);
   }, {});
 };
 
