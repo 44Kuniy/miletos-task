@@ -1,5 +1,5 @@
 const fs = require("fs").promises;
-const { parseFileContents } = require("./utils/files");
+const { parseFileContents, parseSchemeFileContents } = require("./utils/files");
 
 const example = async () => {
   // sample data
@@ -8,12 +8,15 @@ const example = async () => {
   const fileName = "./data/example.txt";
   const fileContents = await fs.readFile(fileName, "utf8");
 
-  console.log("============");
-  console.log(fileContents);
-  console.log("============");
+  const schemeFileName = "./data/scheme.txt";
+  const schemeFileContents = await fs.readFile(schemeFileName, "utf8");
 
-  const result = parseFileContents(fileContents);
-  console.log("result : ", result);
+  const resultWithoutScheme = parseFileContents(fileContents);
+  console.log("-----------------------");
+  console.log("resultWithoutScheme : ", resultWithoutScheme);
+  const resultWithScheme = parseFileContents(fileContents, schemeFileContents);
+  console.log("-----------------------");
+  console.log(" resultWithScheme: ", resultWithScheme);
 };
 
 example();
