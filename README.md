@@ -16,8 +16,6 @@ debug = true
 product = false
 log.file = /var/log/console.log
 log.conf.file = /var/log/config
-debug == true
-dasdasbjdnw:
 count = 452
 port = 80
 ```
@@ -39,7 +37,6 @@ log.conf.file -> string
 ; log.conf.template -> string
 count -> number
 port -> string
-count = number
 ```
 
 # Installation
