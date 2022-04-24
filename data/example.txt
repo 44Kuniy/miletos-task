@@ -3,7 +3,10 @@ endpoint = localhost:3000
 # test2 = t2va
 ; test3 = t3va
 debug = true
+product = false
 log.file = /var/log/console.log
+log.conf.file = /var/log/config
 debug == true
 dasdasbjdnw:
 count = 452
+port = 80

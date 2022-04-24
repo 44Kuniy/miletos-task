@@ -1,0 +1,10 @@
+endpoint -> string
+  debug -> boolean
+# product -> boolean
+product ->  string
+log.file -> number
+log.conf.file -> string
+; log.conf.template -> string
+count -> number
+port -> string
+count = number
