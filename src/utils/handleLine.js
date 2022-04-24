@@ -4,15 +4,20 @@ const isComment = (line) => {
   return false;
 };
 
-// single line should have single equeal.
-const hasLineOnlySingleEqual = (line) => {
-  const equalCharactersInLine = (line.match(new RegExp("=", "g")) || []).length;
+// single line should have single separator.
+const hasLineOnlySingleSeparator = (line, separator) => {
+  const equalCharactersInLine = (line.match(new RegExp(separator, "g")) || [])
+    .length;
   return equalCharactersInLine === 1;
 };
 
-const isValidLine = (line) => {
+const isValidLine = (line, separator) => {
   if (!line) return false;
-  return hasLineOnlySingleEqual(line) && !isComment(line);
+  return hasLineOnlySingleSeparator(line, separator) && !isComment(line);
 };
 
-module.exports = { isComment, hasLineOnlySingleEqual, isValidLine };
+module.exports = {
+  isComment,
+  hasLineOnlySingleSeparator,
+  isValidLine,
+};
