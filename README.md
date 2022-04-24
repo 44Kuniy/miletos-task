@@ -24,7 +24,8 @@ port = 80
 
 #### scheme format
 
-Scheme file format is as same as `sysctl.conf` except for the separator (use `->` not `=`)
+- Scheme file format is as same as `sysctl.conf` except for the separator (use `->` not `=`)
+- You can define`string`, `number`, `boolean` or `undefined` type now.
 
 **scheme file example**
 
